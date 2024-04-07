@@ -43,5 +43,17 @@ function calculateLove() {
     }
 
     var loveResultDiv = document.getElementById('loveResult');
-    loveResultDiv.innerHTML = `Love Score: ${loveScore}%`;
+
+    var animationDuration = 2000; // Duration of the animation in milliseconds
+    var animationInterval = animationDuration / (loveScore + 1); // Interval between each percentage increase
+    var currentPercentage = 1;
+
+    var animation = setInterval(function() {
+        if (currentPercentage <= loveScore) {
+            loveResultDiv.innerHTML = `Love Score: ${currentPercentage}%`;
+            currentPercentage++;
+        } else {
+            clearInterval(animation);
+        }
+    }, animationInterval);
 }
