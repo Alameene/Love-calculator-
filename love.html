@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Confession & Calculator</title>
+    <link rel="stylesheet" href="love.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Love Confession & Calculator</h1>
+        <div class="form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
+            <label for="crush">Crush's Name:</label>
+            <input type="text" id="crush" required>
+            <button onclick="generateConfession()">Generate Confession</button>
+            <div id="loveResult"></div>
+            <button onclick="calculateLove()">Calculate Love</button>
+        </div>
+        <div id="confession"></div>
+    </div>
+    <script src="love.js"></script>
+</body>
+</html>
